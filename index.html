@@ -4,92 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GM</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Home -->
-    <section id="home" class="page">
-        <h1 class="gm">GM</h1>
-        <h2 class="gautham">Gautham</h2>
+<div class="background"></div>
 
-        <button onclick="showSection('life')">
-            ⏳ Life
-        </button>
-    </section>
+<header class="hero">
+    <h1 class="logo">GM</h1>
+    <p class="name">Gautham</p>
+</header>
+
+<main class="container">
 
     <!-- Life -->
-    <section id="life" class="page hidden">
-
-        <h2>⏳ Life</h2>
-
-        <p>📅 8 March 2010</p>
-
-        <p>✨ 16</p>
-
-        <p>∞ Journey Continues...</p>
-
-        <button onclick="showSection('studies')">
-            📚 Studies
-        </button>
-
-    </section>
+    <div class="card">
+        <button class="accordion">⏳ Life</button>
+        <div class="panel">
+            <p>📅 8 March 2010</p>
+            <p>✨ 16</p>
+            <p>∞ Journey Continues...</p>
+            <button class="close-btn">🔼 See Less</button>
+        </div>
+    </div>
 
     <!-- Studies -->
-    <section id="studies" class="page hidden">
-
-        <h2>📚 Studies</h2>
-
-        <p>🏫 School: ...</p>
-
-        <p>📍 Kerala, India</p>
-
-        <p>🎯 Currently Studying</p>
-
-        <button onclick="showSection('love')">
-            ❤️
-        </button>
-
-    </section>
+    <div class="card">
+        <button class="accordion">📚 Studies</button>
+        <div class="panel">
+            <p>🏫 School: ...</p>
+            <p>📍 Kerala, India</p>
+            <p>🎯 Currently Studying</p>
+            <button class="close-btn">🔼 See Less</button>
+        </div>
+    </div>
 
     <!-- Love -->
-    <section id="love" class="page hidden">
-
-        <h2>❤️</h2>
-
-        <p>Still Single</p>
-
-        <button onclick="showSection('games')">
-            🎮 Games
-        </button>
-
-    </section>
+    <div class="card">
+        <button class="accordion">❤️</button>
+        <div class="panel">
+            <h2>❤️</h2>
+            <p>Still Single</p>
+            <button class="close-btn">🔼 See Less</button>
+        </div>
+    </div>
 
     <!-- Games -->
-    <section id="games" class="page hidden">
+    <div class="card">
+        <button class="accordion">🎮 Games</button>
+        <div class="panel">
+            <p>⛏️ Minecraft</p>
+            <p>🚗 Need for Speed: Most Wanted</p>
+            <p>⚽ eFootball</p>
+            <button class="close-btn">🔼 See Less</button>
+        </div>
+    </div>
 
-        <h2>🎮 Games</h2>
+</main>
 
-        <p>⛏️ Minecraft</p>
+<footer>
+    <p>GM © 2026</p>
+    <p>Made by GM</p>
+</footer>
 
-        <p>🚗 Need for Speed: Most Wanted</p>
-
-        <p>⚽ eFootball</p>
-
-        <button onclick="showSection('home')">
-            🔼 See Less
-        </button>
-
-        <footer>
-            <br><br>
-            <p>GM © 2026</p>
-            <p>Made by GM</p>
-        </footer>
-
-    </section>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
