@@ -1,17 +1,29 @@
-function showSection(sectionId) {
+const accordions = document.querySelectorAll(".accordion");
+const closeButtons = document.querySelectorAll(".close-btn");
 
-    // Hide all sections
-    const sections = document.querySelectorAll(".page");
-    sections.forEach(section => {
-        section.classList.add("hidden");
+accordions.forEach((button) => {
+    button.addEventListener("click", () => {
+        const panel = button.nextElementSibling;
+
+        // Close all other panels
+        document.querySelectorAll(".panel").forEach((p) => {
+            if (p !== panel) {
+                p.style.maxHeight = null;
+            }
+        });
+
+        // Toggle current panel
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
     });
+});
 
-    // Show selected section
-    document.getElementById(sectionId).classList.remove("hidden");
-
-    // Scroll to top smoothly
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+closeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        const panel = button.parentElement;
+        panel.style.maxHeight = null;
     });
-}
+});
